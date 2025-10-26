@@ -43,6 +43,16 @@ Fetches user data from a public API, allows adding users locally, searching, and
 
 ---
 
+## Approach
+
+- Used **React 18 functional components** with **hooks** for state and lifecycle management.
+- **React Router v6** for navigation between Home, User Details, and Add User pages.
+- **Axios** to fetch user data from the public API.
+- Added functionality to **store newly added users in localStorage** and merge with API data.
+- Designed a **responsive layout** using SCSS and Material UI components for buttons and forms.
+- Implemented **search functionality** to filter users by name or email.
+
+
 ##  Installation
 
 1. **Clone the repository**
@@ -50,3 +60,21 @@ Fetches user data from a public API, allows adding users locally, searching, and
 ```bash
 git clone https://github.com/riyaverma04/user-management-dashboard.git
 cd user-management-dashboard
+
+
+
+2. **Install dependencies**
+
+npm install
+
+3. **Start development server**
+
+npm run dev
+4. **Open your browser at** 
+
+ http://localhost:5173
+
+
+
+
+Author : Riya Verma
