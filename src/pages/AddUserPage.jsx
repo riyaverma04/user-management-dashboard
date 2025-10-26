@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { TextField, Button, Paper,  Box } from "@mui/material";
+import {  Paper } from "@mui/material";
 import "../styles/addUser.scss";
+import UserForm from "../components/UserForm";
 
 export default function AddUserPage() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "" });
+  const [form, setForm] = useState({ name: "", 
+    email: "", 
+    phone: "", 
+    company: "" });
  const [errors, setErrors] = useState({});
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,67 +53,14 @@ export default function AddUserPage() {
   };
 
   return (
-    <Box className="add-user-container">
+    <div className="add-user-container">
       <Paper elevation={3} className="add-user-paper">
         <p className="add-user-title">
           Add New User
         </p>
 
-        <form onSubmit={handleSubmit} className="add-user-form">
-          <TextField
-            name="name"
-            label="Full Name"
-            variant="outlined"
-            value={form.name}
-            onChange={handleChange}
-            error={!!errors.name}
-            helperText={errors.name}
-            fullWidth
-          />
-          <TextField
-            name="email"
-            label="Email"
-            type="email"
-            variant="outlined"
-            value={form.email}
-            onChange={handleChange}
-            error={!!errors.email}
-            helperText={errors.email}
-            fullWidth
-          />
-          <TextField
-            name="phone"
-            label="Phone Number"
-            type="tel"
-            variant="outlined"
-            value={form.phone}
-            onChange={handleChange}
-            error={!!errors.phone}
-            helperText={errors.phone}
-            fullWidth
-          />
-          <TextField
-            name="company"
-            label="Company Name"
-            variant="outlined"
-            value={form.company}
-            onChange={handleChange}
-            error={!!errors.company}
-            helperText={errors.company}
-            fullWidth
-          />
-
-          <Button
-            variant="contained"
-            color="success"
-            type="submit"
-            size="large"
-            className="submit-btn"
-          >
-            Add User
-          </Button>
-        </form>
+        <UserForm handleSubmit={handleSubmit}  form={form} errors={errors} handleChange={handleChange} />
       </Paper>
-    </Box>
+    </div>
   );
 }
