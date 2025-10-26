@@ -20,7 +20,7 @@ const UserCard = ({ loading, filtered}) => {
             <p>{user.email}</p>
             <p>{user.phone}</p>
             <p>{user.company?.name}</p>
-            <Link to={`/user-details/${user.id}`}>View Details</Link>
+            <Link to={`/user-details/${user.id}`} className='view-details-link'>View Details</Link>
           </div>
         ))}
     </div>

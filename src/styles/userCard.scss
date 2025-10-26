@@ -40,6 +40,25 @@
       padding: 0.3rem 0;
 
     }
+    .view-details-link {
+  text-decoration: none;   // remove underline
+  color: #2e7d32;          // change color (example: green)
+  font-weight: 500;         // make it bolder
+  transition: color 0.3s;
+
+  &:hover {
+    color: #81c784;         // change color on hover
+    text-decoration: underline; // optional: underline on hover
+  }
+
+  &:visited,
+  &:active,
+  &:focus {
+    color: #2e7d32;         // keep consistent color
+    text-decoration: none;
+  }
+}
+
   }
 
   .user-card-heading {
