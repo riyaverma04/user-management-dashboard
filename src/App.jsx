@@ -1,23 +1,31 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import UserDetailsPage from './pages/UserDetailsPage'
-import AddUserPage from './pages/AddUserPage' 
+
+import { Route, Routes } from 'react-router-dom'
+import Home from "./pages/HomePage.jsx"
+import UserDetails from './pages/UserDetailPage.jsx'
+import AddUserPage from './pages/AddUserPage.jsx'
 
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-    <Routes>
-      <Route path="/" element={<HomePage/>} />
-      <Route path="/user-details" element={<UserDetailsPage/>} />
-      <Route path="/add-user" element={<AddUserPage/>} />
-    </Routes>
+    <div className="App">
+      <h1>User Management Dashboard
 
-    </>
+      </h1>
+      </div>
+
+      
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/user-details" element={<UserDetails />} />
+          <Route path="/add-user" element={<AddUserPage />} />
+        </Routes>
+     
+      </>
+
   )
 }
 
