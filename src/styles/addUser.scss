@@ -1,0 +1,59 @@
+.add-user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+
+  padding: 2rem;
+
+  .add-user-paper {
+    width: 100%;
+    max-width: 480px;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    
+
+    &:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+    }
+
+    .add-user-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: 900;
+      color: #2e7d32;
+      font-size: 1.5rem;
+    }
+
+    .add-user-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      
+
+      .submit-btn {
+        margin-top: 1rem;
+        align-self: center;
+        width: 60%;
+        font-weight: 600;
+        text-transform: none;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .add-user-paper {
+    padding: 1.6rem;
+    .add-user-form {
+      .submit-btn {
+        width: 100%;
+      }
+    }
+  }
+}
