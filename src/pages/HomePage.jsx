@@ -3,6 +3,10 @@ import { useState,useEffect } from 'react'
 import { fetchUsers } from '../Api.jsx'
 import { Link } from "react-router-dom";
 import '../styles/home.scss'
+import SearchBar from '../components/SearchBar.jsx';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import UserCard from '../components/UserCard.jsx';
 
 const HomePage = () => {
     const [users, setUsers] = useState([]);
@@ -39,25 +43,25 @@ const HomePage = () => {
   
     <div className="container">
       {/* <h2>User Management Dashboard</h2> */}
-      <input
-        type="text"
-        placeholder="Search by name or email"
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-      />
-      <Link to="/add-user">+ Add User</Link>
+      <div className="home-search-adduser-container">
+        
+        <SearchBar search={search} setSearch={setSearch}/>
+         <Stack direction="row" spacing={2}>
+        <Button variant="contained" color="success" component={Link}       
+        to="/add-user"  >
+          Add User
+      </Button>
+
+         </Stack>
+      
+     
+
+      </div>
+      
 
       <div className="user-list">
-        {loading ? <p className='loading-user'>Loading users...</p> : null}
-        {filtered.map(user => (
-          <div key={user.id} className="user-card">
-            <h3>{user.name}</h3>
-            <p>{user.email}</p>
-            <p>{user.phone}</p>
-            <p>{user.company?.name}</p>
-            <Link to={`/user/${user.id}`}>View Details</Link>
-          </div>
-        ))}
+        <UserCard loading={loading} filtered={filtered}/>
+        
       </div>
     </div>
     

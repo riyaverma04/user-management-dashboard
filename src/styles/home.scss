@@ -1,4 +1,107 @@
 .container{
-    width: 90vw;
+    width: 100%;
     padding: 2rem;
+
+
+
+    .home-search-adduser-container{
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        .add-user-link{
+            text-decoration: none;
+           color: white;
+
+            font-size: 0.8rem;
+
+           
+        }
+        
+    }
+    .user-list{
+        width: 100%;
+        display: flex;
+        
+        flex-direction: column;
+        // flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
 }
+@media (max-width: 912px) {
+    .container{
+   
+    padding: 1.5rem;
+
+
+
+    .home-search-adduser-container{
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        .add-user-link{
+            text-decoration: none;
+           color: white;
+
+            font-size: 0.4rem;
+            padding: 0.2rem;
+
+           
+        }
+        
+    }
+    .user-list{
+        
+        gap: 1.5rem;
+        
+    }
+
+}
+}
+
+@media (max-width: 450px) {
+   
+    .container{
+   
+    padding: 0.8rem;
+
+
+
+    .home-search-adduser-container{
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .add-user-link{
+            text-decoration: none;
+           color: white;
+
+            font-size:18px;
+            padding: 0;
+
+           
+        }
+        
+    }
+    .user-list{
+        
+        gap: 1.5rem;
+        
+    }
+
+}
+}
+   
+    
